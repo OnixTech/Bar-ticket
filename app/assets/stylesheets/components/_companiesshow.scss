@@ -1,0 +1,358 @@
+.sh-container{
+  height:  100%;
+  background-color:white;
+  font-family: $grl-font;
+
+  h1, h2 {
+    padding-top: 20px;
+    text-align: center;
+    color: black;
+  }
+}
+
+#wrapper{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#wrapper .list .item{
+  display: block;
+}
+
+.row {
+  margin-left:0!important;
+  margin-right:0!important;
+}
+
+.sh-searchform{
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  input {
+    width: 95%!important;
+    max-width: 700px!important;
+    max-height: 30px;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0.2);
+  }
+}
+
+.sh-chage-prices{
+  text-align: center;
+}
+
+.sh-input-chage-prices{
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  p{
+    font-size: 18px;
+  }
+  input{
+    width: 53px;
+    height: 20px;
+    margin-left: 5px;
+  }
+}
+
+.sh-cards{
+  justify-content: center;
+  hr{
+    margin: 20px;
+  }
+}
+
+.sh-card{
+  margin: 15px;
+  height: fit-content;
+  border: solid 1px lightgray;
+  box-shadow: 0 4px 8px 0;
+  width: 370px!important;
+  max-width: 95%!important;
+  p{
+    font-size: 16px;
+  }
+  .sh-card-content{
+    margin: 10px;
+    padding: 4px;
+    .sh-card-title-btns{
+      display: flex;
+      justify-content: space-between;
+      .sh-card-edit-delete{
+        height: 28px;
+        display: flex;
+        justify-content: space-between;
+        button{
+          width: 60px;
+          height: 28px;
+          font-size: 9px;
+        }
+      }
+      .sh-card-form-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        border: solid 1px lightgray;
+        .sh-card-form-subtitle{
+          height: 100%;
+          margin-left: 5px;
+          p{  
+            font-size: 11px;
+            margin: auto;
+          }
+          input{
+            all: unset;
+            height: 20px;
+            width: 140px;
+            border: solid 1px lightgray;
+          }
+        }
+        .sh-card-form-position{
+          height: 100%;
+          p{  
+            font-size: 11px;
+            margin: auto;
+          } 
+          input{
+            all: unset;
+            height: 20px;
+            width: 45px;
+            border: solid 1px lightgray;
+          }
+        }
+        .sh-card-form-visible{
+          height: 100%;
+          width: 35px;
+          text-align: center;
+          p{  
+            font-size: 11px;
+            margin: auto;
+          }
+          input{
+            height: 15px;
+            width: 15px;
+            margin: auto;
+            border: solid 1px gray;
+          }
+        }
+        .sh-card-form-btn-update{
+          width: 110px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .sh-btn-edit-section{
+            width: 45px;
+            height: 30px;
+            font-size: 9px;
+            margin: 3px;
+          }
+        }
+        .sh-form-title-menu{
+          width: 60px;
+          height: 28px;
+          font-size: 9px;
+          margin-left: 20px;
+        }
+      }
+    }
+
+  }
+}
+
+.sh-items-li{
+  width: 100%;
+  display: inline;
+  .sh-items-name-price{
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    h5{
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+  .sh-items-description{
+    font-family: $description-font;
+    p{
+      font-size: 11px;
+    }
+  }
+  p{
+    font-size: 12px;
+    margin-bottom: 2px;
+    height: auto;
+  }
+}
+
+.sh-div-set-prices{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px lightgray;
+  .sh-inputs-set-prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+      all: unset;
+      font-size: 12px;
+    }
+    .sh-input-euro,.sh-input-percent{
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      input{
+        width: 50px;
+        height: 21px;
+        font-size: 12px;
+      }
+      p{
+        all: unset;
+        font-size: 12px;
+      }
+    }
+    .sh-input-percent{
+      width: auto;
+      input{
+        width: 45px;
+      }
+    }
+  }
+}
+
+.sh-form-inputs{
+  width: 100%;
+  .sh-input-position{
+    input{
+      width: 40px;
+      border: solid 1px lightgray;
+      border-right: 0px;
+      border-radius: 0!important;
+    }
+  }
+  .sh-inputs-name-price{
+    font-size: 12px;
+    margin-bottom: 4px;
+    display: flex;
+    .sh-input-name{
+      width: 110%;
+      display: flex;
+      justify-content: center;
+      margin: 1px;
+      input{
+        width: 100%;
+        border: solid 1px lightgray;
+        border-right: 0px;
+        border-radius: 0!important;
+      }
+      button{
+        border-left: 0;
+      }
+    }
+    .sh-input-price{
+      width: 20%;
+      text-align: end;
+      display: flex;
+      justify-content: center;
+      margin: 1px;
+      input[type=number]::-webkit-inner-spin-button {
+        opacity: 1
+      }
+      input{
+        width: 100%;
+        text-align: start;
+        border: solid 1px lightgray;
+        border-radius: 0!important;
+      }
+    }
+  }
+
+  .sh-input-description{
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    input{
+      width: 100%;
+      border: solid 1px lightgray;
+      border-right: 0;
+      border-radius: 0!important;
+    }
+    button{
+      border-left: 0;
+    }
+  }
+  .sh-input-btns{
+    display: flex;
+    justify-content: center;
+  }
+  button{
+    border: solid 1px lightgray;
+    border-left: 0px;
+    background-color: white;
+  }
+
+}
+.sh-link{
+  text-decoration: inherit;
+  font-size: 25px;
+  color: black;
+  font-weight: normal;
+}
+
+.sh-div-btn-set-item{
+  display: flex;
+  justify-content: left;
+  margin-bottom: 5px;
+  margin-top: 3px;
+  font-weight: normal;
+}
+
+.sh-div-btn-add{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+.sh-form-inputs-new-section{
+  display: flex;
+  justify-content: center;
+  button{
+    background-color: $btn-color;
+    color: black;
+    font-weight: normal;
+    font-size: 12px;
+    border: solid 1px lightgray;
+    box-shadow: 0 1px 2px 0;
+  }
+  input{
+    box-shadow: 0 1px 2px 0;
+    width: 150px;
+  }
+  .sh-form-input-position{
+    input{
+      width: 40px;
+    }
+  }
+}
+
+.disable{
+  display: none;
+}
+
+.enable{
+  display: "";
+}
+
+.paint{
+  h5{
+    background-color: #ffc600;
+    height: 12px;
+  }
+}

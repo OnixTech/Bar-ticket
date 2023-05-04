@@ -1,0 +1,310 @@
+.cmp-index-container{
+  height: 100%;
+  width: 100%;
+  display: inline;
+  font-family: $grl-font;
+  background-color: white;
+  h3{
+    text-align: center;
+    margin: 20px;
+  }
+  h5{
+    text-align: left;
+    margin-left: 3vh;
+  }
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.cmp-index-top{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.cmp-index-cards{
+  min-height: 130px;
+  justify-content: center;
+  .cmp-index-card-btns{
+    display: inline;
+    width: 240px!important;
+    height: auto;
+    box-shadow: 0 4px 8px 0;
+    margin: 5px;
+    font-weight: normal;
+    .cmp-index-card{
+      width: 100%;
+      height: 100px!important;
+      display: inline;
+      border-bottom: 0px;
+      align-items: center;
+      a, a:hover{
+        color: inherit!important;
+        text-decoration: inherit!important;
+      }
+      .cmp-index-card-content{
+        height: 80px;
+        color: black;
+        .cmp-index-card-tittle{
+          text-align: center;
+          height: auto;
+          margin-top: 20px;
+          padding: 3px;
+          h4{
+            height: 100%;
+            font-size: 16px;
+            margin: 0;
+            color: grey;
+          }
+        }
+        .cmp-index-card-address{
+          text-align: center;
+          height: 30px;
+          p{
+            height: 100%;
+            font-size: 11px;
+            font-family: $grl-font;
+            color: grey;
+          }
+        }
+      }
+    }
+    .cmp-index-card-qr{
+      height: 105px!important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: 2px;
+      .cmp-index-card-qr-g{
+        width: 88px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 3px 0;
+        border-radius: 3px;
+        input{
+          width: auto;
+          margin: 10px;
+        }
+      }
+      .cmp-index-card-svg{
+        width: 45px;
+        height: 45px;
+        box-shadow: 0 2px 3px 0;
+        padding: 3px;
+      }
+    }
+    .cmp-index-card-set-btns{
+      width: 100%!important;
+      height: 20px!important;
+      position: relative;
+      bottom: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 1px lightgrey;
+      button{
+        width: 120px!important;
+        color: black;
+        font-weight: normal;
+        text-align: center;
+        font-size: 12px;
+        border: 0px;
+        background-color: $btn-color;
+        box-shadow: 0 1px 2px 0;
+      }
+    }
+  }
+}
+
+.cmp-index-users-list-container{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  p{
+    font-size: 11px;
+  }
+  .cmp-index-users-list{
+    height: auto;
+    max-height: 300px;
+    width: 380px;
+    padding: 8px;
+    overflow-y:  auto;
+    overflow-x: hidden;
+    p{
+      font-family: $grl-font;
+    }
+    .cmp-index-users-list-user-box{
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: solid 1px lightgray;
+      p{
+        font-size: 11px;
+      }
+      .cmp-index-users-list-user-inputs{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .cmp-index-users-list-user-inputs-sc{
+          display: inline;
+          padding: 3px;
+          select{
+            height: 18px;
+            width: 70px;
+            font-size: 11px;
+            margin: 1px;
+          }
+          p{  
+            font-size: 11px;
+            margin: auto;
+          }
+          input{
+            height: 12px;
+            width: 12px;
+            margin: 1px;
+            margin-top: 3px;
+          }
+          .cmp-index-users-list-user-submit{
+            width: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3px;
+            input{
+              height: 16px;
+              width: 60px;
+            }
+          }
+        }
+      }
+      .cmp-index-users-list-user-inputs-companies{
+        height: 100%!important;
+        width: 150px;
+        overflow-y:  auto;
+        overflow-x: auto;
+        text-align: start;
+        display: inline;
+        margin-top: 3px;
+        .cmp-index-users-list-user-inputs-companies-name{
+          width: auto;
+          font-size: 11px;
+        }
+      }
+    }
+
+  }
+}
+.cmp-index-btn-lgo{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 4px;
+  font-weight: normal;
+  margin: 10px;
+  .h-btn{
+    margin: 10px;
+    box-shadow: 0 3px 6px 0;
+    border: solid 1px grey;
+  }
+}
+
+.row>*{
+  padding-right: 0px!important;
+  padding-left: 0px!important;
+}
+.cmp-index-card-sections-checkbx{
+  width: 95%;
+  height: 120!important;
+  text-align: center;
+  padding: 4px;
+  margin: 6px;
+  box-shadow: 0 0 4px 0;
+  .cmp-index-card-sections-checkbx-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+      font-size: 11px;
+      font-family: $grl-font;
+      margin: auto;
+      color: grey;
+    }
+  }
+  .cmp-index-card-sections-checkbx-checkboxes-row{
+    width: 95%;
+    height: 84px!important;
+    overflow-y:  auto;
+    overflow-x: hidden;
+    text-align: start;
+    margin-left: 8px;
+    .cmp-index-card-sections-checkbx-checkboxes{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .cmp-index-card-sections-checkbx-checkboxes-box-name{
+        width: 115px;
+        height: auto;
+        max-height: none;
+        display: flex;
+        align-items: center;
+        border-bottom: solid 1px lightgrey;
+        padding: 2px;
+        input{
+          width: 15px!important;
+          height: 15px!important;
+        }
+        label{
+          height: auto!important;
+          width: 95px!important;
+          font-size: 9px;
+          line-height: 10px;
+          font-family: $grl-font;
+          top: 2px;
+          margin-left: 4px;
+          padding: 3px;
+          p{
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+  .cmp-index-card-sections-checkbx-checkboxes-submit{
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+      margin: auto;
+      width: 70px;
+    }
+  }
+  hr{
+    margin: 1px;
+  }
+}

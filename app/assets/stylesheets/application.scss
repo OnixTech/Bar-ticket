@@ -4,9 +4,22 @@
 @import "config/bootstrap_variables";
 
 // External libraries
-@import "bootstrap/scss/bootstrap";
-@import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Ubuntu+Condensed&display=swap');
 
 // Your CSS partials
 @import "components/index";
+//@import "components/banner";
+//@import "components/companiesshow";
 @import "pages/index";
+@import "pages/home";
+//@import "pages/menushow";
+//@import "components/buttons";
+//@import "components/sessionnew";
+//@import "components/registrationnew";
+//@import "components/companiesindex";
+//@import "components/companiesnew";
+//@import "components/svgqr";
+
+body, html{
+  height: 100%;
+}

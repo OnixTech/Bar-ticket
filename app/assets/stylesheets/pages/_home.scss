@@ -1,1 +1,30 @@
 // Specific CSS for your home-page
+.h-container{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("cabinet.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0%;
+}
+.h-btns-txt{
+  width: 350px;
+  height: auto;
+  color: white;
+  background-color: black;
+  opacity: 80%;
+  border-radius: 65px;
+  padding: 50px;
+  margin-top: 5px;
+  h3{
+    text-align: center;
+  }
+  .h-btns-div{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+  }
+}
