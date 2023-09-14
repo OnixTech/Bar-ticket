@@ -1,4 +1,6 @@
 <h1>Hola</h1>
 <% @companies.each do |company| %>
-    <%= company %>
+    <%= company.name %>
 <% end %>
+
+<%= button_to " LOG OUT ",  destroy_user_session_path, method: :delete, class:"cmp-index-btn-lgt" %>
