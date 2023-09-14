@@ -30,4 +30,43 @@ if User.count < 1
     :role_id => 1
   )
   master.save!
+
+  pfe = User.new(
+    :email => "info@schankhalle-pfefferberg.de",
+    :password => "123456",
+    :active => true,
+    :role_id => 2
+  )
+  pfe.save!
+  
+  manager = User.new(
+    :email => "b@mail.com",
+    :password => "b@mail.com",
+    :role_id => 2
+  )
+  manager.save!
+end
+
+if Company.count < 1
+  company = Company.new(
+    :name => Faker::Restaurant.name,
+    :city => Faker::Address.city,
+    :suburb => Faker::Address.community,
+    :street => Faker::Address.street_name,
+    :number => Faker::Address.building_number.to_i,
+    :post => Faker::Address.zip_code.to_i,
+    :user_id => 1
+  )
+  company.save!
+
+  restaurant = Company.new(
+    :name => "Pfefferberg",
+    :city => " Berlin",
+    :suburb => "Prenzlauer Berg",
+    :street => "Schönhauser Allee",
+    :number => "176",
+    :post => "10119",
+    :user_id => 2
+  )
+  restaurant.save!
 end
