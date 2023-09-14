@@ -5,3 +5,29 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+roles = [
+  {
+    name: "master",
+    description: "App owner"
+  },
+  {
+    name: "manager",
+    description: "Manager of the bar or restaurant who is allow to make changes on the menu"
+  }
+]
+
+if Role.count  < 1
+  roles.each do |role|
+    Role.create(role)
+  end
+end
+
+if User.count < 1
+  master = User.new(
+    :email => "a@mail.com",
+    :password => "a@mail.com",
+    :active => true,
+    :role_id => 1
+  )
+  master.save!
+end

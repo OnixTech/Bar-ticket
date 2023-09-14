@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-    def index
-        
-    end
+  def index
+    @companies = policy_scope(Company)
+  end
 end
