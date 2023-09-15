@@ -3,7 +3,7 @@ class StationsController < ApplicationController
 
   # GET /stations or /stations.json
   def index
-    @stations = Station.all
+    @stations = policy_scope(Station)
   end
 
   # GET /stations/1 or /stations/1.json
@@ -13,6 +13,7 @@ class StationsController < ApplicationController
   # GET /stations/new
   def new
     @station = Station.new
+    authorize @station
   end
 
   # GET /stations/1/edit
