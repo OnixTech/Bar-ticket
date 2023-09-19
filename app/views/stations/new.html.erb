@@ -1,9 +1,24 @@
-<h1>New station</h1>
+<div class="ssn-new-container">
+  <div class="ssn-new-content">
+    <h2>New station</h2>
+    <%= simple_form_for(@station) do |f| %>
+      <div class="form-inputs ssn-new-form-inputs">
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <%= f.input :name,
+                  as: :string,
+                  input_html: { autocomplete: "off" },
+                  label: "Station Name" %>
+        <%= f.hidden_field :company_id, value:  @company_id %>
+      </div>
 
-<%= render "form", station: @station %>
-
-<br>
-
-<div>
-  <%= link_to "Back to stations", stations_path %>
+      <div class="form-action">
+        <%= f.button :submit %>
+      </div>
+    <% end %>
+    <div>
+      <%= link_to "Back to stations", stations_path %>
+      <%= @company_id %>
+    </div>
+  </div>
 </div>

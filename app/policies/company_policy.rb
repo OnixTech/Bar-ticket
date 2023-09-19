@@ -17,10 +17,13 @@ class CompanyPolicy < ApplicationPolicy
   def index?
     true
   end 
+  def show?
+    authorize_user
+  end 
 
   private
 
   def authorize_user
-    @current_user.id == @company.user_id
+    @current_user == @company.user
   end
 end

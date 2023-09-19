@@ -9,12 +9,32 @@ class StationPolicy < ApplicationPolicy
     end
   end
 
-  def initialize(current_user, company)
+  def initialize(current_user, station)
     @current_user = current_user
-    @company = company
-  end 
+    @station = station
+  end
+
+  
   
   def new?
-    true
+    user_active
+  end
+  
+  def create?
+    authorize_user || authorize_master
+  end
+
+  private
+
+  def authorize_user
+    @current_user == @station.company.user
+  end
+
+  def authorize_master
+    @current_user.role.name == "master"
+  end
+
+  def user_active
+    @current_user.active?
   end
 end

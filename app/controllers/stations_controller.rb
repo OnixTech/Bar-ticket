@@ -8,11 +8,14 @@ class StationsController < ApplicationController
 
   # GET /stations/1 or /stations/1.json
   def show
+    @station = Station.new
+    authorize @station
   end
 
   # GET /stations/new
   def new
     @station = Station.new
+    @company_id = params[:company_id]
     authorize @station
   end
 
@@ -23,15 +26,12 @@ class StationsController < ApplicationController
   # POST /stations or /stations.json
   def create
     @station = Station.new(station_params)
-
-    respond_to do |format|
-      if @station.save
-        format.html { redirect_to station_url(@station), notice: "Station was successfully created." }
-        format.json { render :show, status: :created, location: @station }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @station.errors, status: :unprocessable_entity }
-      end
+    authorize @station
+    if @station.save
+      flash[:success] = "Resource was successfully created."
+      redirect_to company_path(@station.company_id)
+    else
+      render 'new'
     end
   end
 
@@ -66,6 +66,6 @@ class StationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def station_params
-      params.fetch(:station, {})
+      params.require(:station).permit(:name, :company_id)
     end
 end
