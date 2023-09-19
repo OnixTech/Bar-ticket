@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+<h1><%= @company.name %></h1>
+<br>
+<h3>Stations</h3>
+
+<div id="stations">
+  <% @stations.each do |station| %>
+    <%= station.name %>
+    <p>
+      <%= link_to "Show this station", station %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New station", new_station_path(company_id: @company.id) %>
+<%= @company.id %>
