@@ -1,7 +1,10 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @station %>
-
+<h2><%= @station.name %></h2>
+<% @orders.each do |order|  %>
+<div>
+  <%= order.table %>
+  <%= order.content %>
+</div>
+<% end %>
 <div>
   <%= link_to "Edit this station", edit_station_path(@station) %> |
   <%= link_to "Back to stations", stations_path %>

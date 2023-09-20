@@ -8,7 +8,7 @@ class StationsController < ApplicationController
 
   # GET /stations/1 or /stations/1.json
   def show
-    @station = Station.new
+    @orders = Order.where(station_id: @station)
     authorize @station
   end
 

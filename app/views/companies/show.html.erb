@@ -5,10 +5,7 @@
 
 <div id="stations">
   <% @stations.each do |station| %>
-    <%= station.name %>
-    <p>
-      <%= link_to "Show this station", station %>
-    </p>
+    <%= link_to "#{ station.name }", station_path(station) %>
   <% end %>
 </div>
 

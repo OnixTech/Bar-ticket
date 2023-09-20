@@ -14,6 +14,9 @@ class StationPolicy < ApplicationPolicy
     @station = station
   end
 
+  def show?
+    authorize_user
+  end
   
   
   def new?
