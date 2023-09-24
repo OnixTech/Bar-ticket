@@ -11,6 +11,6 @@ class PetitionsController < ApplicationController
 
         # Respond with JSON data (optional)
         render json: { message: 'Basket data received successfully' }
-        p basket_params
+        p "Recived: #{basket_params} "
     end
 end

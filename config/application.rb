@@ -25,3 +25,14 @@ module BarOrder
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+# config/application.rb or config/initializers/cors.rb
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'http://127.0.0.1:3001' # Replace with the actual origin of your client
+    resource '/bsktreq',
+      headers: ['Content-Type'],
+      methods: [:post],
+      credentials: false
+  end
+end
