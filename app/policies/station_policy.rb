@@ -3,7 +3,7 @@ class StationPolicy < ApplicationPolicy
     def resolve
       if user.role == "master"
         scope.all
-      else 
+      else
         scope.where(company: @company)
       end 
     end
