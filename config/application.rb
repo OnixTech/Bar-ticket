@@ -31,8 +31,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins 'http://127.0.0.1:3001'
     resource '*',
-    headers: 'headers: ['Content-Type','X-CSRF-Token']',
-      methods: [:post],
-      credentials: false
+    headers: ['Content-Type','X-CSRF-Token'],
+    methods: [:post],
+    credentials: true
   end
 end
