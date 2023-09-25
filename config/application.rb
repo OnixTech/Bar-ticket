@@ -30,9 +30,14 @@ end
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins 'http://127.0.0.1:3001'
-    resource '*',
+    resource '/bsktreq',
     headers: ['Content-Type','X-CSRF-Token'],
     methods: [:post],
+    credentials: true
+
+    resource '/reqtkn',
+    headers: ['Content-Type', 'X-CSRF-Token'],
+    methods: [:post,:get],
     credentials: true
   end
 end

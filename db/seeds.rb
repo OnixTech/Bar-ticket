@@ -36,6 +36,15 @@ if User.count < 1
     :role_id => 1
   )
   master.save!
+  
+  pablo = User.new(
+    :email => "pablo@fillo.com",
+    :password => "Pablo88Fillo$",
+    :active => true,
+    :role_id => 1
+  )
+  pablo.save!
+
   puts "..."
   p master
   pfe = User.new(

@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :stations
   end
   post '/bsktreq', to: 'petitions#recbaskt'
+  get '/reqtkn', to: 'csrf_tokens#show'
 end
