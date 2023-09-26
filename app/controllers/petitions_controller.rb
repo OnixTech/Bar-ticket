@@ -27,8 +27,6 @@ class PetitionsController < ApplicationController
     end
 
     def create_order
-        order = Order.new(@order)
-        p order
-        order.save!
+        redirect_to 
     end
 end
