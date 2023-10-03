@@ -10,23 +10,17 @@ class OrdersController < ApplicationController
   def create
     order = Order.new(@order)
     order.save
-    getrqst
   end
 
   def delete
-
   end
+  
   private
 
   def order_params
     params.require(:order).permit(:table, :content, :number, :station_id)
   end
-
-  def getrqst
-    redirect_to refresh_station_path(@order["station_id"])
-  end
-
-  
+ 
   def format_order_content(content)
     str = ""
     content.each do |item|

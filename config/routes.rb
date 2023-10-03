@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   end
   post '/bsktreq', to: 'petitions#recbaskt'
   get '/reqtkn', to: 'csrf_tokens#show'
+  resources :orders, only: [:new, :create, :destroy]
 end

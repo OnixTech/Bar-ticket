@@ -27,6 +27,7 @@ class PetitionsController < ApplicationController
     end
 
     def create_order
-        redirect_to 
+        session[:order] = @order
+        redirect_to new_order_path
     end
 end
