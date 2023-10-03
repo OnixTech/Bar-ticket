@@ -1,19 +1,37 @@
 class OrdersController < ApplicationController
+  def new
+    skip_authorization
+    @order = session[:order]
+    session.delete(:order)
+    @order["content"] = format_order_content(@order["content"])
+    create
+  end
 
-    def new
+  def create
+    order = Order.new(@order)
+    order.save
+    getrqst
+  end
 
+  def delete
+
+  end
+  private
+
+  def order_params
+    params.require(:order).permit(:table, :content, :number, :station_id)
+  end
+
+  def getrqst
+    redirect_to refresh_station_path(@order["station_id"])
+  end
+
+  
+  def format_order_content(content)
+    str = ""
+    content.each do |item|
+      str += "• #{item["quantity"]}x #{item["name"]} #{item["price"]}\n"
     end
-
-    def create
-
-    end
-
-    def delete
-    
-    end
-    private
-
-    def order_params
-      params.require(:station).permit(:name, :company_id)
-    end
+    str
+  end
 end
