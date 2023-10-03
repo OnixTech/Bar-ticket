@@ -9,12 +9,14 @@ class OrdersController < ApplicationController
 
   def create
     order = Order.new(@order)
-    order.save
+    if order.save
+      ActionCable.server.broadcast("order_1", { action: "created"})
+    end
   end
 
   def delete
   end
-  
+
   private
 
   def order_params

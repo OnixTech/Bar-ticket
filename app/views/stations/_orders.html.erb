@@ -1,6 +1,8 @@
-<% @orders.each do |order|  %>
-  <div>
-    <%= order.table %>
-    <p><%= raw order.content.gsub("\n", "<br>") %></p>
-  </div>
-<% end %>
+<div class="row">
+  <% @orders.each do |order|  %>
+    <div  class="order-list col-sm-6 col-md-4 col-xl-2">
+      <%= order.table %>
+      <p><%= raw order.content.gsub("\n", "<br>") %></p>
+    </div>
+  <% end %>
+</div>

@@ -1,5 +1,5 @@
 <h2><%= @station.name %></h2>
-<div class="order-list">
+<div>
   <%= render partial: 'orders'%>
 </div>
 <div>
@@ -8,3 +8,5 @@
 
   <%= button_to "Destroy this station", @station, method: :delete %>
 </div>
+
+<div data-controller="websocket-order"></div>

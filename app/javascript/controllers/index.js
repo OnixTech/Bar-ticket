@@ -6,3 +6,6 @@ import { application } from "./application"
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import WebsocketOrderController from "./websocket_order_controller"
+application.register("websocket-order", WebsocketOrderController)
