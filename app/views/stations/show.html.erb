@@ -9,4 +9,4 @@
   <%= button_to "Destroy this station", @station, method: :delete %>
 </div>
 
-<div data-controller="websocket-order"></div>
+<div data-controller="websocket-order" data-stationid="<%= @station.id %>"></div>

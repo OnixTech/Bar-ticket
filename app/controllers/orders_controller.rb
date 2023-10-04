@@ -10,7 +10,12 @@ class OrdersController < ApplicationController
   def create
     order = Order.new(@order)
     if order.save
-      ActionCable.server.broadcast("order_1", { action: "created"})
+      ActionCable.server.broadcast(
+        "order_#{order.station_id}",
+        { 
+          action: "created"
+        }
+      )
     end
   end
 

@@ -1,7 +1,10 @@
 <div class="row">
   <% @orders.each do |order|  %>
     <div  class="order-list col-sm-6 col-md-4 col-xl-2">
-      <%= order.table %>
+      <div>
+        <%= order.table %>
+        <%= order.created_at %>
+      </div>
       <p><%= raw order.content.gsub("\n", "<br>") %></p>
     </div>
   <% end %>
