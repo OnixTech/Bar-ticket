@@ -1,11 +1,16 @@
 <div class="row">
   <% @orders.each do |order|  %>
-    <div  class="order-list col-sm-6 col-md-4 col-xl-2">
-      <div>
-        <%= order.table %>
-        <%= order.created_at %>
+    <div  class="stn-show-order-list col-sm-6 col-md-4 col-xl-2">
+      <div class="stn-show-order-list-top">
+        <h5>Table #: <%= order.table %></h5>
+        <p><%= order.created_at %></p>
       </div>
-      <p><%= raw order.content.gsub("\n", "<br>") %></p>
+      <hr>
+      <p class="stn-show-order-list-content"><%= raw order.content.gsub("\n", "<br>") %></p>
+      <div class="stn-show-order-list-total">
+        <hr>
+        <p>Total :</p>
+      </div>
     </div>
   <% end %>
 </div>
