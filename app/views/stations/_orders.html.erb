@@ -9,7 +9,7 @@
       <p class="stn-show-order-list-content"><%= raw order.content.gsub("\n", "<br>") %></p>
       <div class="stn-show-order-list-total">
         <hr>
-        <p>Total :</p>
+        <p>Total : <%= order.total %></p>
       </div>
     </div>
   <% end %>

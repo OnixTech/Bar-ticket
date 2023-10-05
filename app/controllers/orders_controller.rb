@@ -25,13 +25,13 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:table, :content, :number, :station_id)
+    params.require(:order).permit(:table, :content, :total, :number, :station_id)
   end
  
   def format_order_content(content)
     str = ""
     content.each do |item|
-      str += "• #{item["quantity"]}x #{item["name"]} #{item["price"]}\n"
+      str += "• #{item["quantity"]}x #{item["name"]} €#{item["price"]}\n"
     end
     str
   end

@@ -29,7 +29,7 @@ end
 # config/application.rb or config/initializers/cors.rb
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://127.0.0.1:3001'
+    origins 'https://fillo.herokuapp.com'
     resource '/bsktreq',
     headers: ['Content-Type','X-CSRF-Token'],
     methods: [:post],

@@ -156,6 +156,7 @@ if Order.count < 1
     :table => Faker::Address.building_number,
     :content => Faker::ChuckNorris.fact,
     :number => 1,
+    :total => '%.2f' % Faker::Number.between(from: 0.05, to: 100),
     :station_id => 1
   )
   order.save!
@@ -164,6 +165,7 @@ if Order.count < 1
   order = Order.new(
     :table => Faker::Address.building_number,
     :content => Faker::ChuckNorris.fact,
+    :total => '%.2f' % Faker::Number.between(from: 0.05, to: 100),
     :number => 1,
     :station_id => 2
   )
@@ -173,6 +175,7 @@ if Order.count < 1
   order = Order.new(
     :table => Faker::Address.building_number,
     :content => Faker::ChuckNorris.fact,
+    :total => '%.2f' % Faker::Number.between(from: 0.05, to: 100),
     :number => 1,
     :station_id => 3
   )
@@ -182,6 +185,7 @@ if Order.count < 1
   order = Order.new(
     :table => Faker::Address.building_number,
     :content => Faker::ChuckNorris.fact,
+    :total => '%.2f' % Faker::Number.between(from: 0.05, to: 100),
     :number => 1,
     :station_id => 4
   )

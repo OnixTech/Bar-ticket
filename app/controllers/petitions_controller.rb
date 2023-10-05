@@ -11,7 +11,6 @@ class PetitionsController < ApplicationController
     private
 
     def login
-        p "Recived in login action: #{@basket_params}"
         #----------------- Login User ------------------#
         user = User.find_by(email: @basket_params["email"])
         if user && user.valid_password?(@basket_params["password"])
@@ -21,6 +20,7 @@ class PetitionsController < ApplicationController
         @order = {
             table: @basket_params["table"],
             content: @basket_params["items"],
+            total: @basket_params["total"],
             station_id: 1,
         }
         create_order
