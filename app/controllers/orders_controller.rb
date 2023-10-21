@@ -2,7 +2,6 @@ class OrdersController < ApplicationController
   def new
     skip_authorization
     @order = session[:order]
-    session.delete(:order)
     @order["content"] = format_order_content(@order["content"])
     create
   end
@@ -16,6 +15,9 @@ class OrdersController < ApplicationController
           action: "created"
         }
       )
+      if current_user.present?
+        sign_out(current_user)
+      end
     end
   end
 
