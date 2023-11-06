@@ -67,9 +67,10 @@ if User.count < 1
   puts "Three users successfully created." 
 end
   puts "Companies..."
+
 if Company.count < 1
   company = Company.new(
-    :name => Faker::Restaurant.name,
+    :name => "Loco Loco",
     :city => Faker::Address.city,
     :suburb => Faker::Address.community,
     :street => Faker::Address.street_name,
@@ -80,18 +81,7 @@ if Company.count < 1
   company.save!
   puts "."
   p company
-  company = Company.new(
-    :name => Faker::Restaurant.name,
-    :city => Faker::Address.city,
-    :suburb => Faker::Address.community,
-    :street => Faker::Address.street_name,
-    :number => Faker::Address.building_number.to_i,
-    :post => Faker::Address.zip_code.to_i,
-    :user_id => 1
-  )
-  company.save!
-  puts "."
-  p company
+
   restaurant = Company.new(
     :name => "Pfefferberg",
     :city => " Berlin",
@@ -104,13 +94,27 @@ if Company.count < 1
   restaurant.save!
   puts "."
   p restaurant
+
+  company = Company.new(
+    :name => Faker::Restaurant.name,
+    :city => Faker::Address.city,
+    :suburb => Faker::Address.community,
+    :street => Faker::Address.street_name,
+    :number => Faker::Address.building_number.to_i,
+    :post => Faker::Address.zip_code.to_i,
+    :user_id => 1
+  )
+  company.save!
+  puts "."
+  p company
+
   restaurant = Company.new(
-    :name => "Pfefferberg",
-    :city => " Berlin",
-    :suburb => "Prenzlauer Berg",
-    :street => "Schönhauser Allee",
-    :number => "176",
-    :post => "10119",
+    :name => Faker::Restaurant.name,
+    :city => Faker::Address.city,
+    :suburb => Faker::Address.community,
+    :street => Faker::Address.street_name,
+    :number => Faker::Address.building_number.to_i,
+    :post => Faker::Address.zip_code.to_i,
     :user_id => 2
   )
   restaurant.save!
