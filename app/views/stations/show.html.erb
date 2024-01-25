@@ -1,12 +1,13 @@
-<h2><%= @station.name %></h2>
-<div>
-  <%= render partial: 'orders'%>
-</div>
-<div>
-  <%= link_to "Edit this station", edit_station_path(@station) %> |
-  <%= link_to "Back to stations", stations_path %>
+<div class="stn-sw-container">
+  <h2><%= @station.name %></h2>
+  <div class="stn-sw-orders">
+    <%= render partial: 'orders'%>
+  </div>
+  <div>
+    <%= link_to "Edit this station", edit_station_path(@station) %> |
+    <%= link_to "Back to stations", stations_path %>
 
-  <%= button_to "Destroy this station", @station, method: :delete %>
+    <%= button_to "Destroy this station", @station, method: :delete %>
+  </div>
 </div>
-
 <div data-controller="websocket-order" data-stationid="<%= @station.id %>"></div>
